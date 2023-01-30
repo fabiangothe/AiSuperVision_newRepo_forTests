@@ -1,0 +1,5 @@
+sphinx-sqlalchemy
+furo
+pymysql
+flask
+flask_sqlalchemy
