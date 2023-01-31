@@ -20,7 +20,7 @@ html_theme = "furo"
 
 #following is added for sphinxcontrib-sadisplay according to: https://github.com/sphinx-contrib/sadisplay
 plantuml = 'java -jar plantuml.jar'.split()
-graphviz = 'dot -Tpng'.split()
+graphviz = 'dot -png'.split()
 sadisplay_default_render = 'plantuml'
 
 
