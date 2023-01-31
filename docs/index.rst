@@ -8,11 +8,12 @@ Example
 
 ::
 
-    .. sqla-model:: example.models.students
+    .. sqla-model:: example.models.Person
+    .. sqla-model:: example.models.Address
 
 
-
-.. sqla-model:: example.models.students
+.. sqla-model:: example.models.Person
+.. sqla-model:: example.models.Address
 
 
 
