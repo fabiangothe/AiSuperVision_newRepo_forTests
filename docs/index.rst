@@ -8,9 +8,6 @@ Example
 ..  sqlaviz::
     :metadataobject: example.models.metadata = MetaData(bind=None)
 
-.. sadisplay::
-    :module: example.models.Person, example.models.Address
-
 ::
 
     .. sqla-model:: example.models.Person
