@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:FabianAchim67!@localhost/documentation_test_database'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:AbCd123!@localhost/documentation_test_database'
 app.config['SECRET_KEY'] = "random string"
 
 db = SQLAlchemy(app)
@@ -22,7 +22,13 @@ class students(db.Model):
     addr = db.Column(db.String(200), doc="test_Doc")
     pin = db.Column(db.String(10), doc="test_Doc")
 '''
+#'''
+from sqlalchemy import MetaData
+metadata_obj = MetaData()
 
+for t in metadata_obj.sorted_tables:
+    print(t.name)
+#'''
 
 class Person(db.Model):
     id = db.Column(db.Integer, primary_key=True, doc="Documentation for id")
@@ -42,6 +48,8 @@ def __init__(self, name, city, addr,pin):
     self.addr = addr
     self.pin = pin
 
+'''
+'''
 @app.route('/')
 def show_all():
     return render_template('show_all.html', students = students.query.all() )
@@ -60,9 +68,11 @@ def new():
             flash('Record was successfully added')
             return redirect(url_for('show_all'))
     return render_template('new.html')
+'''
 
+#'''
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug = True)
-'''
+#'''

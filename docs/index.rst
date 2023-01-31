@@ -5,8 +5,11 @@ Sphinx extension for documenting SQLAlchemy ORMs. Test 11
 
 Example
 -------
+.. .. sqlaviz::
+    :metadataobject: example.models.metadata = MetaData(bind=None)
+
 .. sadisplay::
-    :module: models
+    :module: example.models.Person, example.models.Address
 
 ::
 
