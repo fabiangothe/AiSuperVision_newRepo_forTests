@@ -14,7 +14,7 @@ import sys
 
 
 
-extensions = ['sphinx_sqlalchemy', 'sphinxcontrib.sadisp', 'sphinxcontrib_sqlalchemyviz']
+extensions = ['sphinx_sqlalchemy', 'sphinxcontrib.sadisp', 'sphinxcontrib-sqlalchemyviz']
 
 html_theme = "furo"
 
