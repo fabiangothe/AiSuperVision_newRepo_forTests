@@ -1,12 +1,12 @@
 sphinx-sqlalchemy
 =================
 
-Sphinx extension for documenting SQLAlchemy ORMs. Test 11
+Sphinx extension for documenting SQLAlchemy ORMs. Test 12
 
 Example
 -------
 .. sqlaviz::
-    :metadataobject: example.models.metadata
+    :metadataobject: example.models.db.metadata
 
 
 
