@@ -14,13 +14,26 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:FabianAchim67!@localhost/d
 app.config['SECRET_KEY'] = "random string"
 
 db = SQLAlchemy(app)
-
+'''
 class students(db.Model):
     id = db.Column('student_id', db.Integer, primary_key = True)
     name = db.Column(db.String(100), doc="test_Doc")
     city = db.Column(db.String(50), doc="test_Doc")
     addr = db.Column(db.String(200), doc="test_Doc")
     pin = db.Column(db.String(10), doc="test_Doc")
+'''
+
+
+class Person(db.Model):
+    id = db.Column(db.Integer, primary_key=True, doc="Documentation for id")
+    name = db.Column(db.String(50), nullable=False, doc="Documentation for name")
+    addresses = db.relationship('Address', backref='person', lazy=True, doc="Documentation for addresses")
+
+class Address(db.Model):
+    id = db.Column(db.Integer, primary_key=True, doc="Documentation for id")
+    email = db.Column(db.String(120), nullable=False, doc="Documentation for email")
+    person_id = db.Column(db.Integer, db.ForeignKey('person.id'),
+                          nullable=False, doc="Documentation for person_id")
 
 '''
 def __init__(self, name, city, addr,pin):
@@ -28,7 +41,7 @@ def __init__(self, name, city, addr,pin):
     self.city = city
     self.addr = addr
     self.pin = pin
-'''
+
 @app.route('/')
 def show_all():
     return render_template('show_all.html', students = students.query.all() )
@@ -52,3 +65,4 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(debug = True)
+'''
