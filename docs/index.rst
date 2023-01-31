@@ -1,15 +1,12 @@
 sphinx-sqlalchemy
 =================
 
-Sphinx extension for documenting SQLAlchemy ORMs. Test 9
+Sphinx extension for documenting SQLAlchemy ORMs. Test 10
 
 Example
 -------
 .. sadisplay::
     :module: example.models.Person, example.models.Address
-    :link:
-    :alt: My Schema
-    :render: graphviz
 
 ::
 
