@@ -22,12 +22,13 @@ class students(db.Model):
     addr = db.Column(db.String(200), doc="test_Doc")
     pin = db.Column(db.String(10), doc="test_Doc")
 
+'''
 def __init__(self, name, city, addr,pin):
     self.name = name
     self.city = city
     self.addr = addr
     self.pin = pin
-
+'''
 @app.route('/')
 def show_all():
     return render_template('show_all.html', students = students.query.all() )
