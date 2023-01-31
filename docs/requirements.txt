@@ -4,7 +4,9 @@ pymysql
 flask
 flask_sqlalchemy
 sphinxcontrib-sadisplay
+pydot
 viz
 graphviz
 sqlalchemyviz
+
 
