@@ -5,8 +5,13 @@ Sphinx extension for documenting SQLAlchemy ORMs. Test 12
 
 Example
 -------
-.. sqlaviz::
-    :metadataobject: example.models.db.metadata
+::
+    .. sqla-model:: example.models.Person
+    .. sqla-model:: example.models.Address
+
+
+.. sqla-model:: example.models.Person
+.. sqla-model:: example.models.Address
 
 
 
