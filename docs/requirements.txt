@@ -4,6 +4,6 @@ pymysql
 flask
 flask_sqlalchemy
 sphinxcontrib-sadisplay
-viz
+graphviz
 sqlalchemyviz
 
