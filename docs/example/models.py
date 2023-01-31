@@ -17,10 +17,10 @@ db = SQLAlchemy(app)
 
 class students(db.Model):
     id = db.Column('student_id', db.Integer, primary_key = True)
-    name = db.Column(db.String(100))
-    city = db.Column(db.String(50))
-    addr = db.Column(db.String(200))
-    pin = db.Column(db.String(10))
+    name = db.Column(db.String(100), doc = "test_Doc")
+    city = db.Column(db.String(50), doc = "test_Doc")
+    addr = db.Column(db.String(200), doc = "test_Doc")
+    pin = db.Column(db.String(10), doc = "test_Doc")
 
 def __init__(self, name, city, addr,pin):
     self.name = name
