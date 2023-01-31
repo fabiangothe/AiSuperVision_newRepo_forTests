@@ -3,3 +3,4 @@ furo
 pymysql
 flask
 flask_sqlalchemy
+sphinxcontrib-sadisplay
