@@ -4,7 +4,7 @@ import sys
 
 # add example module to the python path
 # ist in GitHub im original so drin, aber geht auch ohne, warum???
-#sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(__file__))
 
 #die folgenden Zeilen waren nur zum Ausprobieren
 #sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
