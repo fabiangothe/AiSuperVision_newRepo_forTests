@@ -23,4 +23,3 @@ plantuml = 'java -jar plantuml.jar'.split()
 graphviz = 'dot -Tpng'.split()
 sadisplay_default_render = 'plantuml'
 
-
