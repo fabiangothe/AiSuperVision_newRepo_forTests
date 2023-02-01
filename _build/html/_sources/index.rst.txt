@@ -1,7 +1,7 @@
 sphinx-sqlalchemy
 =================
 
-Sphinx extension for documenting SQLAlchemy ORMs. Test 14
+Sphinx extension for documenting SQLAlchemy ORMs. Test 15
 
 Example
 -------

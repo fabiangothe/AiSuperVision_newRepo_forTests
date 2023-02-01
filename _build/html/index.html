@@ -189,13 +189,62 @@
         <article role="main">
           <section id="sphinx-sqlalchemy">
 <h1>sphinx-sqlalchemy<a class="headerlink" href="#sphinx-sqlalchemy" title="Permalink to this heading">#</a></h1>
-<p>Sphinx extension for documenting SQLAlchemy ORMs. Test 14</p>
+<p>Sphinx extension for documenting SQLAlchemy ORMs. Test 15</p>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">sqla</span><span class="o">-</span><span class="n">model</span><span class="p">::</span> <span class="n">example</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Person</span>
 <span class="o">..</span> <span class="n">sqla</span><span class="o">-</span><span class="n">model</span><span class="p">::</span> <span class="n">example</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Address</span>
 </pre></div>
 </div>
+<dl class="simple sqla">
+<dt>example.models.Person (<em>person</em>)</dt><dd><p class="rubric">Columns:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><em>id*</em></p></td>
+<td><p>INTEGER</p></td>
+<td><p>Documentation for id</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>VARCHAR(50)</p></td>
+<td><p>Documentation for name</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Constraints:</p>
+<ul class="simple">
+<li><p>PRIMARY KEY (id)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple sqla">
+<dt>example.models.Address (<em>address</em>)</dt><dd><p class="rubric">Columns:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-left">
+<tbody>
+<tr class="row-odd"><td><p><em>id*</em></p></td>
+<td><p>INTEGER</p></td>
+<td><p>Documentation for id</p></td>
+</tr>
+<tr class="row-even"><td><p>email</p></td>
+<td><p>VARCHAR(120)</p></td>
+<td><p>Documentation for email</p></td>
+</tr>
+<tr class="row-odd"><td><p>→ person_id</p></td>
+<td><p>INTEGER</p></td>
+<td><p>Documentation for person_id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Constraints:</p>
+<ul class="simple">
+<li><p>FOREIGN KEY (person.id → person_id)</p></li>
+<li><p>PRIMARY KEY (id)</p></li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
 
